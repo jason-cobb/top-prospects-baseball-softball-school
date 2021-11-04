@@ -8,16 +8,13 @@ ul{
 }
 /*insert dropbox js*/
 header{    
-    max-width: 450px;
     padding:10px 10px;
-    color: black;
-    size-adjust: 1rem;
-    text-align:  right;
+    background-color: white;    
+    text-align: right;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 35px;
-    
+    font-size: 77px;
+    color: #FFDC22;
 }
 header img{
     width: 40%;
@@ -37,9 +34,10 @@ header img{
 }
 
 body{
+    
     font:normal 20px 'Roboto', arial, sans-serif;
-    color:#ffd700;/*#FFDC22 yellow from picker -logo*/
-    background-color: /*#1d1d1d; /* is Purdue background*/
+    color: palegoldenrod;/*#ffd700;#FFDC22 yellow from picker -logo*/
+    background-color: #1d1d1d; /* is Purdue background*/
     opacity: 0.9;
     text-align: left;
 }
@@ -53,10 +51,9 @@ a:hover {
     opacity: 1;
 }
 .profile-pic{ 
-    border: 4px solid powderblue;
-    border-color: powderblue;
-    border-radius: 5%;
-    width: 450px;
+    border: 4px solid lightskyblue;
+    border-radius: 10%;
+    width: 370px;
 
 }
 .profile-pic img{
@@ -95,7 +92,7 @@ section h3{
 
 }
 section h2{
-    color: blue;
+    color: lightskyblue;
     font-style:'Roboto', arial, sans-serif;
     font-size: 32px;
 }
@@ -117,15 +114,26 @@ div {
     justify-content: center;
 }*/
 h4{
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
-
-
+.best {
+    background-color: gray;
+}
+.lessons{
+    color:lightskyblue;
+    border:3px; 
+    width:210px;
+    height:auto;
+    display: inline-block;
+}
+.lessons li{
+    font-size: 2rem;
+}
 .btn{
     display: inline-block;
-    padding: 4px 1.1em 1.2em;
-    margin:1px 0.5em 0.1em 0;
-    border: 0 0.9em solid rgba(255,255,255,0);
+    padding: 29px 1.1em 1.2em;
+    margin:1px 0.2em 0.1em 0;
+    border: 0 01.1em solid rgba(255,255,255,0);
     color:black;
     text-emphasis: bold;
     font-size: 34px;
@@ -136,7 +144,7 @@ h4{
     font-weight: 300;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     text-align: center;
-    border-color: black;
+    
 }
 .btn:hover{
     border-color: rgb(255,255,255,1);
@@ -195,6 +203,14 @@ footer li a{
         padding: 80px 15px;
     }
 }
+.contact div{
+    padding-left: 0;
+    text-align: left;
+    color:white;
+    width: 350px;
+    height:auto;
+}
+
 /*--------------
 HEADER
 --------------*/
