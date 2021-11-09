@@ -155,6 +155,53 @@ h4{
 .btn:hover{
     border-color: rgb(255,255,255,1);
 }
+
+form {
+    margin: 1rem;
+    max-width: 25rem;
+}
+
+    label{
+        display: block;
+        padding: .75rem 0;
+            }
+    span{
+        font-size: .75rem;
+        color:#1d1d1d;
+    }
+    input, textarea{
+        display: block;
+        font-size: 1rem;
+        padding: .75rem;
+        background-color: #f6f6f6;
+        border: 1px solid #bba;
+        margin-top: .2rem;
+        width:100%;
+    }
+    textarea{
+        min-height: 13rem;
+    }
+    input:required {border: 2px solid red;}
+    input:required:valid {border-color:green;}
+    input:focus, textarea:focus {background-color: rgb(197, 191, 191);}
+    /*///end label*/
+    input  {
+        border: none;
+        background-color: #706e6e;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: normal;
+        padding: .4rem 1rem;
+        border-radius: 1rem;
+        width: 100%;
+    }
+
+
+
+
+
+
+
 @media (max-width: 1000px){
     section{
         padding: 100px 50px;
@@ -202,13 +249,16 @@ footer{
     align-items: center;
 }
 footer ul{
+    
     display: flex;
+    flex-direction: row;  
     margin-bottom: 25px;
     font-size: 42px;
     
 }
 footer ul li{
-    margin: 0 5px;
+    
+        margin: 0 5px;
 }
 footer ul li:first-child{
     margin-left: 0;
