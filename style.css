@@ -160,14 +160,14 @@ form {
     margin: 1rem;
     max-width: 25rem;
 }
-
-    label{
+    
+    label {
         display: block;
         padding: .75rem 0;
-            }
+        }
     span{
         font-size: .75rem;
-        color:#1d1d1d;
+        color:#1d1d1dcb;
     }
     input, textarea{
         display: block;
@@ -183,19 +183,36 @@ form {
     }
     input:required {border: 2px solid red;}
     input:required:valid {border-color:green;}
-    input:focus, textarea:focus {background-color: rgb(197, 191, 191);}
+    input:focus, textarea:focus {background-color: #ddc;}
     /*///end label*/
     input  {
         border: none;
-        background-color: #706e6e;
+        background-color: #e4d8d8;
         color: white;
         font-size: 1.5rem;
         font-weight: normal;
         padding: .4rem 1rem;
         border-radius: 1rem;
-        width: 100%;
+        width: 90%;
     }
-
+    /*.sbs{
+        display: ;
+        align-content: flex-start;
+    } align button to the left */
+    
+    
+    .submitBtn{
+        border: none;
+        color:white;
+        background-color: green;
+        font-size: 1.5rem;
+        font-weight: normal;
+        padding: .4rem 1rem;
+        border-radius:  1rem;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }               
 
 
 
@@ -218,7 +235,7 @@ form {
 }
 @media (max-width: 500px){
     section{
-        padding: 15px 25px;
+        padding: 25px 25px;
     }
     .top {
         flex-direction: column;
@@ -249,31 +266,22 @@ footer{
     align-items: center;
 }
 footer ul{
-    
     display: flex;
     flex-direction: row;  
     margin-bottom: 25px;
-    font-size: 42px;
-    
+    font-size: 42px;   
 }
-footer ul li{
-    
-        margin: 0 5px;
-}
-footer ul li:first-child{
-    margin-left: 0;
-}
-footer ul li:last-child{
-    margin-right: 0;
-}
+
 footer p {
     text-transform: uppercase;
     font-size: 14px;
     color: rgba(255,255,255,.6);
     margin-bottom: 10px;
 }
-footer li a{
+/*footer a{                      why is footer messing up as screen expands?
     color: #fff;
+    display: flex;
+    flex-direction: row;
 }
 
 /*.contact .content{
