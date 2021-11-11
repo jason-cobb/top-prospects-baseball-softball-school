@@ -1,17 +1,19 @@
 
-//const button = document.getElementById('hamburger')
 
-//button.addEventListener('click', function(){
-    
-    
-   // const hamburger = document.getElementById('X');
+(function(){
 
-  //  if (X.classList.contains('d-none')){
-   //     X.classList.remove('d-none');
-    }
-   // else{
-    //    X.classList.add('d-none');
+    var hamburger = {
+        navToggle: document.querySelector('.nav-toggle'),
+        nav: document.querySelector('nav'),
 
-  //  }
-//});
+        doToggle: function(e){
+            e.preventDefault();
+            this.navToggle.classList.toggle('expanded');
+            this.nav.classList.toggle('expanded');
+        }   
+     };
 
+     hamburger.navToggle.addEventListener('click', function (e) {
+         hamburger.doToggle(e);
+     });
+    }());

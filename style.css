@@ -5,20 +5,21 @@
 }
 ul{
     list-style: none;
+    
 }
 /*insert dropbox js yellow hamburger*/
 header{    
-    padding:10px 10px;
+    padding:8px 8px;
     background-color: white;    
-    text-align: right;
     display: flex;
     justify-content: space-between;
-    font-size: 77px;
-    color: #FFDC22;
+    font-size: 11px;
+    /*position:fixed;
+    /*color:#1d1d1d/*#50A0FB; /*#FFDC22;yellow*/
     
 }
 header img{
-    width: 40%;
+    width: 30%;
     height: auto;
 }
 .top{
@@ -28,7 +29,8 @@ header img{
     justify-content: space-between;
     height: 80px;
     width: 100%;
-    background-color:#a8a3a3;
+    background-color:#50A0FB;/*#a8a3a3;*/
+    color:white;
     padding:20px 10px;   
     
 }
@@ -44,13 +46,17 @@ body{
     /*background-color: #1d1d1d; /* is Purdue background*/
     opacity: 0.9;
     text-align: left;
+    background-color: white;
 }
 a{
     text-decoration: none;
-    color: rgb(37, 76, 102); /*#FFDC22; or yellow rgb(255, 145, 0);*/
+    color:#50A0FB; /*rgb(37, 76, 102); /*#FFDC22; or yellow rgb(255, 145, 0);*/
     cursor: pointer;
     opacity: 0.9;
      
+}
+nav a{
+    color:white;
 }
 a:hover {
     opacity: 1;
@@ -112,7 +118,7 @@ div {
 div a {
    
     font-size: 65px;
-    color:royalblue;
+    color:#50A0FB;/*royalblue; for app store icons*/
     opacity: 85%;
     
 }
@@ -188,12 +194,12 @@ form {
     input  {
         border: none;
         background-color: #e4d8d8;
-        color: white;
+        color: black;
         font-size: 1.5rem;
         font-weight: normal;
         padding: .4rem 1rem;
         border-radius: 1rem;
-        width: 90%;
+        width: 85%;
     }
     /*.sbs{
         display: ;
@@ -219,35 +225,51 @@ form {
 
 
 
-@media (max-width: 1000px){
+@media (min-width: 800px){
     section{
         padding: 100px 50px;
+    }
+    .top {
+        display: flex;
+        flex-direction: row;
     }
     
 }
 
-@media (max-width: 800px){
+@media (min-width: 501px){
     section{
         padding: 20px 20px;
     }
-    
-    
+    .top {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-toggle-bar{
+    display: none;
+    }
+   
 }
 @media (max-width: 500px){
+    
     section{
         padding: 25px 25px;
     }
-    .top {
+    .nav {
         flex-direction: column;
-       
+       display: none;
+    }
+    .expanded{display: flex;
+        flex-direction: column;
+
     }
     .store-links{
         flex-wrap:wrap;
+        
     }
     .profile-pic{ 
-       
-        width: 300px;
+       width: 300px;
     
+    }
 }
 
 /*ul.grid{

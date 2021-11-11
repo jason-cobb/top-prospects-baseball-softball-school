@@ -12,23 +12,13 @@
 <header>  
     
     <img src="img/tpl-logo.jpg" alt= "Top Prospects of Louisville logo" image="Winner of Best of Lessons Award"></div>
-    <div class="icon-bars">
-    
-        <i class="fas fa-bars" id='hamburger'></i>
-        <p>&#9776;</p>
+    <div class="nav-toggle">
+        <a class="nav-toggle-bar">&#9776;</a>
     </div>
-    <div class="menu-text">Menu</div>
-   </div>
-   <nav id="main-nav" class="menu-primary-menu-continer is-open">
-       <ul id="menu-primry-menu" class>
-           <li></li>
-       </ul>
-   </nav>
-
-
+   
 </header>
 <body>
-    <nav>
+    <nav class="nav">
     <ul class="top">
         
         <li><a href="#instuct">Instructors</a></li>
@@ -68,7 +58,7 @@
     <ul> <img src="img/epsteinhitting.jpg" alt="Certified Epstein Hitting Instructor Logo" title="JB is a Certified Epstein Hitting Instructor">
         <li>Certified <a href="https://epsteinhitting.com/services/coaches/hitting-instructor-certification/certified-instructor-master-list/">&ldquo;Mike Epstein Hitting&rdquo;</a> Instructor</li>
         <li>Head Coach <a href="https://www.mercyacademy.com/athletics/softball"> Mercy Academy Softball</a></li>
-        <li>Coach of the Year: 6th Region</li>
+        <li>Coach of the Year&#58; 6th Region</li>
         <li>General Manager - KC Freedom Kentucky Travel Softball Organization</li>
         
     </ul>
@@ -76,15 +66,15 @@
 </section>
 <section id="sched">
     
-    <form method="get" action="thanks.html">
+    <form name="myForm" method="post"  action="formProcessor.html">
     <h2>Request an Evaluation</h2>
     <fieldset>
         <legend> Contact Information</legend>
     
-            <label>First Name <span>(required)</span><input class="pi"type="text" name="name" required></label>
-        
-            <label> Email <span>(required)</span><input class="pi"type="email" name="name" placeholder="name@gmail.com" required></label>
-
+            <label id="fullName" class="">First Name <input class="pi"type="text" name="name"></label>
+            <span id="error">Please provide a name</span>
+            <label> Email <input class="pi"type="email" name="name" placeholder="name@gmail.com" ></label>
+            <span id="error">Please provide a valid email</span>
             <label>Phone <input class="pi" type="tel" name="phone"></label>
     </fieldset>
 
@@ -93,8 +83,8 @@
 
             <label>Player Name<span>    </span><input class="pi"type="text" name="name"></label>
             <label>Player Age<span>    </span><input class="pi"type="number" min="5" max="18" name="age"></label>
-            <label><input class="sbs" type="radio" value="none" id="male" name="gender" required/>Male </label>
-            <label><input class="sbs"type="radio" value="none" id="female" name="gender" required/>Female </label>
+            <label><input class="sbs" type="radio" value="none" id="male" name="gender" >Male </label>
+            <label><input class="sbs"type="radio" value="none" id="female" name="gender">Female </label>
     </fieldset>
     <fieldset>
         <legend>Skill Evaluation Desired</legend>
