@@ -29,7 +29,7 @@ header img{
     justify-content: space-between;
     height: 80px;
     width: 100%;
-    background-color:#50A0FB;/*#a8a3a3;*/
+    background-color:#1d1d1d;/*#50A0FB;/*#a8a3a3;*/
     color:white;
     padding:20px 10px;   
     
@@ -57,6 +57,7 @@ a{
 }
 nav a{
     color:white;
+    
 }
 a:hover {
     opacity: 1;
@@ -122,6 +123,9 @@ div a {
     opacity: 85%;
     
 }
+.nav-toggle-bar{
+    color: #1d1d1d;
+}
 /*.box{
     max-width: 90%;
     height: 50%;
@@ -161,21 +165,19 @@ h4{
 .btn:hover{
     border-color: rgb(255,255,255,1);
 }
-
+/*////form and label*/
 form {
     margin: 1rem;
     max-width: 25rem;
 }
-    
+       
     label {
         display: block;
-        padding: .75rem 0;
+        padding: rem 0;
         }
-    span{
-        font-size: .75rem;
-        color:#1d1d1dcb;
-    }
-    input, textarea{
+    
+    
+    .myInput, textarea{
         display: block;
         font-size: 1rem;
         padding: .75rem;
@@ -183,13 +185,70 @@ form {
         border: 1px solid #bba;
         margin-top: .2rem;
         width:100%;
+       
     }
     textarea{
         min-height: 13rem;
     }
-    input:required {border: 2px solid red;}
-    input:required:valid {border-color:green;}
-    input:focus, textarea:focus {background-color: #ddc;}
+    section p{
+        display: none;
+    }
+    section div {
+        color: #777;
+        font-size: .9 rem;
+        padding: .3rem 0 .1rem .2rem;
+        margin-top:2rem;
+        
+    }
+
+    section h3{
+        font:larger;
+        
+        
+    }
+    .sbs{
+        display:flex;
+        flex-shrink: inherit;
+        max-width: 600px;
+        
+        
+    } 
+    //Additional details to fill out each input correctly (hidden by default)
+   
+    section span {        
+        display: none;
+   }
+    section.error span {
+        display:block;
+        font-size: .75rem;
+        color: #c20000;
+        padding-left: .2rem;
+    }
+    section.error div{
+        background-color: rgba(255,255,255,.3);
+    }
+    // error instructions at the top of the page
+    section p {display:none;}
+    section.error p {
+        display:block;
+        border:soid 1 px #F00;
+        background-color: rgba(255,0,0,.3);
+        padding: .5rem .3rem;
+    }
+    
+    .submitBtn{
+        border: none;
+        color:white;
+        background-color:rgb(3, 78, 100);
+        font-size: 1.5rem;
+        font-weight: normal;
+        padding: .4rem 1rem;
+        border-radius:  1rem;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }   
+    
     /*///end label*/
     input  {
         border: none;
@@ -201,24 +260,8 @@ form {
         border-radius: 1rem;
         width: 85%;
     }
-    /*.sbs{
-        display: ;
-        align-content: flex-start;
-    } align button to the left */
-    
-    
-    .submitBtn{
-        border: none;
-        color:white;
-        background-color: green;
-        font-size: 1.5rem;
-        font-weight: normal;
-        padding: .4rem 1rem;
-        border-radius:  1rem;
-        width: 100%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }               
+
+            
 
 
 
@@ -318,4 +361,3 @@ footer p {
 /*--------------
 HEADER
 --------------*/
-}

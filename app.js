@@ -14,6 +14,16 @@
      };
 
      hamburger.navToggle.addEventListener('click', function (e) {
-         hamburger.doToggle(e);
+         ha$mburger.doToggle(e);
      });
     }());
+
+    "use strict";
+
+function validateForm () {
+    var status = true;
+    
+   
+
+return status;
+}

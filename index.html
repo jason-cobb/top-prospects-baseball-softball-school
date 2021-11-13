@@ -65,46 +65,50 @@
 
 </section>
 <section id="sched">
-    
-    <form name="myForm" method="post"  action="formProcessor.html">
     <h2>Request an Evaluation</h2>
-    <fieldset>
-        <legend> Contact Information</legend>
+    <form name="myForm" method="post" action="formProcessor.html" onsubmit="return validateForm()">
     
-            <label id="fullName" class="">First Name <input class="pi"type="text" name="name"></label>
-            <span id="error">Please provide a name</span>
-            <label> Email <input class="pi"type="email" name="name" placeholder="name@gmail.com" ></label>
-            <span id="error">Please provide a valid email</span>
-            <label>Phone <input class="pi" type="tel" name="phone"></label>
-    </fieldset>
+    <section id="formProblems" class="">
+        <p>There was a problem with your submission.<br> Errors have been highlighted below.</p>
+    </section>
+    
+    <section class=""> <h3>Contact Information</h3></section>
+    
+            <label ><div id="fullName">Contact Name </div><input name="name" type="text" class="myInput" autocomplete="name"id="fullName"></label>
+            <span>Please provide a name</span>
+            <label> Email <input class="myInput"type="email" name="name" placeholder="name@email.com" ></label>
+            <label>Phone <input class="myInput" type="tel" name="phone" autocomplete="tel" placeholder="502-555-5555"></label>
+            <span>Please provide your phone number.</span>
+    </section>
 
-    <fieldset>
-        <legend>Player Information</legend>
+    <section>
+        <section id="playerInformation" class=""><h3>Player Information</h3></section>
 
-            <label>Player Name<span>    </span><input class="pi"type="text" name="name"></label>
-            <label>Player Age<span>    </span><input class="pi"type="number" min="5" max="18" name="age"></label>
-            <label><input class="sbs" type="radio" value="none" id="male" name="gender" >Male </label>
-            <label><input class="sbs"type="radio" value="none" id="female" name="gender">Female </label>
-    </fieldset>
-    <fieldset>
-        <legend>Skill Evaluation Desired</legend>
-            <label><input class="sbs"type="checkbox" value="pitching Evaluation" >Pitching Evaluation</label>
-            <label><input class="sbs"type="checkbox" value="hittting Evaluation" >Hitting Evaluation</label>
-            <label><input class="sbs"type="checkbox" value="catching Evaluation" >Catching Evaluation</label>
+            <label><div>Player Name</div><input class="pi"type="text" name="name"></label>
+            <label><div>Player Age</div><input class="pi"type="number" min="5" max="18" name="age"></label>
+            <label><input class="sbs" type="radio"  id="male" name="gender" >Male </label>
+            <label><input class="sbs"type="radio"  id="female" name="gender">Female </label>
+    </section>
+    <section>
+        <section><h3>Skill Evaluation Desired</h3></section>
+            <label><input class="sbs"type="checkbox" value="pitching Evaluation" >Pitching</label>
+            <label><input class="sbs"type="checkbox" value="hittting Evaluation" >Hitting  </label>
+            <label><input class="sbs"type="checkbox" value="catching Evaluation" >Catching </label>
 
-   </fieldset>
-    <fieldset>
-        <legend>Highest Level of Playing Experience</legend>
+   </section>
+    <section>
+        <section>Highest Level of Playing Experience</section>
             <label><input class="sbs"type="radio" value="beginner" name = "lessonType">Beginner</label>
             <label><input class="sbs"type="radio" value="rec league" name = "lessonType">Recreational League</label>
             <label><input class="sbs"type="radio" value="travel ball" name = "lessonType">Travel Ball</label>
 
-    </fieldset>
+    </section>
             <label>Your Question<textarea></textarea></label>
                 <input  class="submitBtn" type="submit" value="Request My Evaluation">
 
-    </form>
+</form>
 </section>
+
 <section>
     <h2>Scheduling Apps for Returning Clients</h2>
 
