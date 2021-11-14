@@ -66,38 +66,38 @@
 </section>
 <section id="sched">
     <h2>Request an Evaluation</h2>
-    <form name="myForm" method="post" action="formProcessor.html" onsubmit="return validateForm()">
+    <form  name="myForm" method="post" action="./formProcessor.html" onsubmit="return validateForm()">
     
     <section id="formProblems" class="">
         <p>There was a problem with your submission.<br> Errors have been highlighted below.</p>
     </section>
     
-    <section class=""> <h3>Contact Information</h3></section>
+    <section > <h3>Contact Information</h3>
     
-            <label ><div id="fullName">Contact Name </div><input name="name" type="text" class="myInput" autocomplete="name"id="fullName"></label>
-            <span>Please provide a name</span>
+            <label class="" id="fullName"><div >Contact Name </div><input name="name" type="text" class="myInput" autocomplete="name">
+            <span>Please provide a name</span></label>
             <label> Email <input class="myInput"type="email" name="name" placeholder="name@email.com" ></label>
-            <label>Phone <input class="myInput" type="tel" name="phone" autocomplete="tel" placeholder="502-555-5555"></label>
-            <span>Please provide your phone number.</span>
+            <label class="" id="phoneNumber"><div>Phone </div><input class="myInput" type="tel" name="phone" autocomplete="tel" placeholder="502-555-5555">
+            <span>Please provide your phone number.</span></label>
     </section>
 
-    <section>
-        <section id="playerInformation" class=""><h3>Player Information</h3></section>
+    
+    <section id="playerInformation" class=""><h3>Player Information</h3>
 
             <label><div>Player Name</div><input class="pi"type="text" name="name"></label>
             <label><div>Player Age</div><input class="pi"type="number" min="5" max="18" name="age"></label>
             <label><input class="sbs" type="radio"  id="male" name="gender" >Male </label>
             <label><input class="sbs"type="radio"  id="female" name="gender">Female </label>
     </section>
-    <section>
-        <section><h3>Skill Evaluation Desired</h3></section>
-            <label><input class="sbs"type="checkbox" value="pitching Evaluation" >Pitching</label>
-            <label><input class="sbs"type="checkbox" value="hittting Evaluation" >Hitting  </label>
-            <label><input class="sbs"type="checkbox" value="catching Evaluation" >Catching </label>
-
+    
+    <section id="evalType" class=""><h3>Skill Evaluation Desired</h3>
+            <label><input class="sbs"type="checkbox" name="skillEval" value="pitching Evaluation" >Pitching</label>
+            <label><input class="sbs"type="checkbox" name="skillEval" value="hittting Evaluation" >Hitting  </label>
+            <label><input class="sbs"type="checkbox" name="skillEval" value="catching Evaluation" >Catching </label>
+            <span>Please provide a selection.</span>
    </section>
-    <section>
-        <section>Highest Level of Playing Experience</section>
+    
+    <section><h3>Highest Level of Experience</h3>
             <label><input class="sbs"type="radio" value="beginner" name = "lessonType">Beginner</label>
             <label><input class="sbs"type="radio" value="rec league" name = "lessonType">Recreational League</label>
             <label><input class="sbs"type="radio" value="travel ball" name = "lessonType">Travel Ball</label>
