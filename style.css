@@ -13,7 +13,7 @@ header{
     background-color: white;    
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
+    
     /*position:fixed;
     /*color:#1d1d1d/*#50A0FB; /*#FFDC22;yellow*/
     
@@ -23,6 +23,7 @@ header img{
     height: auto;
     max-width: 180px;
 }
+
 .top{
     display: flex;
     flex-wrap: wrap;
@@ -57,7 +58,7 @@ a{
     color:#50A0FB; /*rgb(37, 76, 102); /*#FFDC22; or yellow rgb(255, 145, 0);*/
     cursor: pointer;
     opacity: 0.9;
-     
+         
 }
 nav a{
     color:white;    
@@ -120,19 +121,15 @@ div {
 
 div a {
    
-    font-size: 65px;
+    font-size: 25px;
     color:#50A0FB;/*royalblue; for app store icons*/
-    opacity: 85%;
-    
 }
 .nav-toggle-bar{
     color: #1d1d1d;
+    font-size: 44px;
+    
 }
-/*.box{
-    max-width: 90%;
-    height: 50%;
-    justify-content: center;
-}*/
+
 h4{
     padding-bottom: 8px;
 }
@@ -150,17 +147,18 @@ h4{
 .btn{
     
     display: inline-block;
-    padding: 15px .5em 5px;
+    padding: 9px .5em 5px;
     background-color: goldenrod;
-    border: 0 01.1em solid rgba(255,255,255,0);
+    border: 0 10.1em solid rgba(22, 20, 20, .9);
     color:#1d1d1d;
-    text-emphasis: bold;
+    
     font-size: 34px;
     border-radius: 1.5em;
     text-decoration: none;
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 300;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    align-items: center;
     
 }
 .btn:hover{
@@ -271,6 +269,7 @@ form {
     .facilityPic{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
     .facilityPic img{
         margin-top: 8px;
@@ -278,32 +277,40 @@ form {
         width:20rem;
         height: auto;
     }
-    
-    
-/*large screen*/
-@media screen and (min-width: 801px){
-    section{
-        padding: 100px 50px;
+    /* grid container*/
+
+    .instructors{
+        grid-area: instructors;
     }
-    .top {
-        color: yellow;
-        height: 60px;
+    .form-left{
+        grid-area: sidebar;
     }
-    
-    .facilityPic {
-        display:flex;  
-        flex: 25%;
-        max-width: 25%;
+    .apps-left{
+        grid-area: scheduling;
     }
-      
-    .facilityPic img{
-        margin-top: 8px;
-        vertical-align: middle;
-        width:100%;
+    .facility-right{
+        grid-area: facility;
     }
-}
-   
-/*tablet*/
+    .test-right{
+        grid-area: test;
+    }
+    .bio{
+        grid-area: bio;
+    }
+    .wrapper{
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+            "instructors"
+            "sidebar"
+            "scheduling"
+            "facility"
+            "test";
+    }
+        
+     
+/*tablet screen*/
+
 @media screen and (min-width: 501px){
    
     section{
@@ -344,8 +351,44 @@ form {
         width: 15rem;
         max-height: 14rem;
     }
-    
 } 
+/* end media tablet*/
+/* large*/
+@media screen and (min-width: 801px){
+   
+    section{
+        padding: 100px 50px;
+    }
+    .top {
+        color: yellow;
+        height: 60px;
+    }
+    
+    
+      
+    
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "instructors bio"
+        "sidebar facility"
+        "scheduling scheduling"
+        "test test"; 
+    }
+    .facilityPic {
+        
+        display:flex;
+        flex-wrap:wrap;
+        max-width: 25%;
+        max-height: 90%;
+        
+    }
+    .bio p {display:contents}
+
+}
+   
+/*end large*/
     
    
 
@@ -363,8 +406,11 @@ form {
         flex-direction: column;
 
     }
-    .store-links{
+    .store-links {
         flex-wrap:wrap;
+    }
+    .store-links i{
+        font-size: 55px;
     }
     .profile-pic{ 
        width: 300px;
