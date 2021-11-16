@@ -21,19 +21,23 @@ header{
 header img{
     width: 30%;
     height: auto;
+    max-width: 180px;
 }
 .top{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    height: 80px;
+    height: 65px;
     width: 100%;
     background-color:#1d1d1d;/*#50A0FB;/*#a8a3a3;*/
     color:white;
-    padding:20px 10px;   
+    padding:3px 3px; 
+    align-content: center;
     
 }
+.order{
+    order:1;
+}/* make Scheduling last so easier to touch on small screen*/
 .lessons-img{
     width:110px;
     height:110px;
@@ -41,7 +45,6 @@ header img{
 }
 
 body{
-    
     font:normal 20px 'Roboto', arial, sans-serif;
     color: #1d1d1d;/*palegoldenrod;/*#ffd700;#FFDC22 yellow from picker -logo*/
     /*background-color: #1d1d1d; /* is Purdue background*/
@@ -57,8 +60,7 @@ a{
      
 }
 nav a{
-    color:white;
-    
+    color:white;    
 }
 a:hover {
     opacity: 1;
@@ -212,8 +214,6 @@ form {
         display:flex;
         flex-shrink: inherit;
         max-width: 600px;
-        
-        
     } 
     /*Additional details to fill out each input correctly (hidden by default)*/
    
@@ -234,7 +234,7 @@ form {
         padding-left: .5rem;
     }
     
-    /* error instructions at the top of the page*/
+    /* error instructions */
     section p {display:none;}
     section.error p {
         display:block;
@@ -267,39 +267,45 @@ form {
         border-radius: 1rem;
         width: 85%;
     }
-    .facilityPic  {
-        display:flex;
+    
+    .facilityPic{
+        display: flex;
         flex-direction: column;
-        width:100%;
+    }
+    .facilityPic img{
+        margin-top: 8px;
+        vertical-align: middle;
+        width:20rem;
+        height: auto;
     }
     
     
-
-@media (min-width: 800px){
+/*large screen*/
+@media screen and (min-width: 801px){
     section{
         padding: 100px 50px;
     }
     .top {
-        display: flex;
-        flex-direction: row;
-    }
-    .facilityPic {
-        display:flex;        
-        flex-direction: row;
-        width: 100%;
-
-    }
-       /* max-width: 1000px;
-        height:auto;
-        flex-basis: 33%;
-    }*/
-    .facilityPic img{
-        width:15%;
-        height:auto;
+        color: yellow;
+        height: 60px;
     }
     
-
-@media (min-width: 501px){
+    .facilityPic {
+        display:flex;  
+        flex: 25%;
+        max-width: 25%;
+    }
+      
+    .facilityPic img{
+        margin-top: 8px;
+        vertical-align: middle;
+        width:100%;
+    }
+}
+   
+/*tablet*/
+@media screen and (min-width: 501px){
+   
     section{
         padding: 20px 20px;
     }
@@ -317,20 +323,34 @@ form {
         flex-wrap: wrap-reverse;
         width:120px;
     }*/
-    /*.facilityPic {
-        display:flex;        
+    .facilityPic {
+        display:flex;
+        flex-wrap: wrap;
+        flex: 70%;        
         flex-direction: row;
-        width: 100%;
-
+        
     }
-    .facilityPic img{
+    /*.facilityPic img{
         width:15%;
         height:auto;
     }*/
+   
+    .facilityPic img{
+        margin-top: 8px;
+        width:16rem;
+        height: auto;
+    }
+    .horizontal  {
+        width: 15rem;
+        max-height: 14rem;
+    }
+    
+} 
     
    
-}
-@media (max-width: 500px){
+
+/*phone*/
+@media screen and  (max-width: 500px){
     
     section{
         padding: 25px 25px;
@@ -345,13 +365,16 @@ form {
     }
     .store-links{
         flex-wrap:wrap;
-        
     }
     .profile-pic{ 
        width: 300px;
     }
+    .facilityPic {
+        display: flex;
+        flex-direction: column;
+        
+    }
     
-    .horizontal{display: none}
 
 }/*end of small media*/
 
@@ -383,6 +406,7 @@ footer p {
     color: rgba(255,255,255,.6);
     margin-bottom: 10px;
 }
+
 /*footer a{                      why is footer messing up as screen expands?
     color: #fff;
     display: flex;

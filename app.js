@@ -17,8 +17,9 @@
          hamburger.doToggle(e);
      });
     }());
+//end for hamburger toggle
 
-    "use strict";
+"use strict";
 
 function validateForm () {
     var status = true;
@@ -60,7 +61,5 @@ if (foundChecked === false) {
     status=false;
      document.getElementById('evalType').className = "error";
 }
-    
-
     return status;
 }
