@@ -87,7 +87,7 @@ section{
 section p {
     max-width: 800px;
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     padding: 0 2px;
     line-height: 1.75;
 }
@@ -95,7 +95,7 @@ section h3{
     
     color: #1d1d1d;/*lightblue;*/
     font: 24px 'Roboto', arial, sans-serif;
-    padding: 5px;
+   
     
 }
 .appointment-ul{
@@ -110,7 +110,7 @@ section h2{
 }
 .name{
     text-align: left;
-    padding-left: 150px;
+    padding-left: 7rem;
 }
 
 div {
@@ -120,14 +120,12 @@ div {
 }
 
 div a {
-   
     font-size: 25px;
     color:#50A0FB;/*royalblue; for app store icons*/
 }
 .nav-toggle-bar{
     color: #1d1d1d;
     font-size: 44px;
-    
 }
 
 h4{
@@ -135,6 +133,7 @@ h4{
 }
 .best {
     font-style: italic;
+
 }
 .lessons{
     color:#1d1d1d;/*#50A0FB; blue inside best of lesson*/
@@ -174,20 +173,15 @@ form {
     padding: .5rem 2rem;
 }
        
-    label {
-        display: block;
-        padding: rem 0;
-        }
-    
     
     .myInput, textarea{
         display: block;
         font-size: 1rem;
         padding: .75rem;
-        background-color: #f6f6f6;
+        background-color: hsl(0, 15%, 86%);
         border: 1px solid #bba;
         margin-top: .2rem;
-        width:100%;
+        width:90%;
        
     }
     textarea{
@@ -199,14 +193,13 @@ form {
     section div {
         color: #777;
         font-size: .9 rem;
-        padding: .3rem 0 .1rem .2rem;
+        padding: .1rem 0 .1rem .2rem;
         margin-top:2rem;
         
     }
     section h3{
         font:larger;
-        text-decoration: underline;
-                
+        text-decoration: underline;         
     }
     .sbs{
         display:flex;
@@ -236,8 +229,8 @@ form {
     section p {display:none;}
     section.error p {
         display:block;
-        border:solid 1 px #F00;
-        background-color: rgba(255,0,0,.3);
+        border:solid 1px #F00;
+        background-color: rgba(255, 0, 0, 0.35);
         padding: .5rem .3rem;
     }
     
@@ -273,9 +266,12 @@ form {
     }
     .facilityPic img{
         margin-top: 8px;
-        vertical-align: middle;
-        width:20rem;
-        height: auto;
+        
+        width:90%;
+        height:auto;
+    }
+    .store-links i{
+        font-size: 55px;
     }
     /* grid container*/
 
@@ -337,33 +333,59 @@ form {
         flex-direction: row;
         
     }
-    /*.facilityPic img{
-        width:15%;
-        height:auto;
-    }*/
-   
+      
     .facilityPic img{
         margin-top: 8px;
         width:16rem;
         height: auto;
     }
-    .horizontal  {
-        width: 15rem;
-        max-height: 14rem;
+    div .horizontal  {
+        width: 22rem;
+        height: 11rem;
     }
+    
 } 
 /* end media tablet*/
 /* large*/
 @media screen and (min-width: 801px){
    
     section{
-        padding: 100px 50px;
-    }
-    .top {
-        color: yellow;
-        height: 60px;
+        padding: 25px 30px;
     }
     
+    .best {
+        font-style: italic;
+        justify-content: space-around;
+    }
+    
+    .lessons li{
+        
+        color:#1d1d1d;/*#50A0FB; blue inside best of lesson*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+        height:auto;
+        font-size: 45px;   
+    }
+    form {
+    margin: 5px;
+    max-width: 75rem;
+    border-style: solid;
+    border-width: 3px;
+    padding: .2rem .5rem;
+}
+    .content{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    iframe{
+        padding-left:30% ;
+        
+
+    }
     
       
     
@@ -376,16 +398,21 @@ form {
         "scheduling scheduling"
         "test test"; 
     }
-    .facilityPic {
-        
-        display:flex;
-        flex-wrap:wrap;
-        max-width: 25%;
-        max-height: 90%;
-        
-    }
+    
     .bio p {display:contents}
 
+}
+.row img {
+        
+    display:flex;
+    flex-wrap:wrap;
+    max-width: 45%;
+    max-height: 90%;
+    
+}
+div .horizontal  {
+    width: 22rem;
+    max-height: 14rem;
 }
    
 /*end large*/
@@ -398,10 +425,7 @@ form {
     section{
         padding: 25px 25px;
     }
-    .nav {
-        flex-direction: column;
-       display: none;
-    }
+    
     .expanded{display: flex;
         flex-direction: column;
 
@@ -409,9 +433,7 @@ form {
     .store-links {
         flex-wrap:wrap;
     }
-    .store-links i{
-        font-size: 55px;
-    }
+    
     .profile-pic{ 
        width: 300px;
     }
