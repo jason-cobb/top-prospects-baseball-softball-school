@@ -1,13 +1,16 @@
-*{
+html, body {
     margin: 0;
-    padding: 5px;
-        
+    padding: 0;       
 }
+
+* {
+    box-sizing: border-box;
+}
+
 ul{
     list-style: none;
-    
 }
-/*insert dropbox js yellow hamburger*/
+/*insert logo left,  hamburger right*/
 header{    
     padding:8px 8px;
     background-color: white;    
@@ -15,8 +18,7 @@ header{
     justify-content: space-between;
     
     /*position:fixed;
-    /*color:#1d1d1d/*#50A0FB; /*#FFDC22;yellow*/
-    
+    /*color:#1d1d1d/*#50A0FB; /*#FFDC22;yellow*/   
 }
 header img{
     width: 30%;
@@ -28,30 +30,31 @@ header img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 65px;
+    height: 85px;
     width: 100%;
     background-color:#1d1d1d;/*#50A0FB;/*#a8a3a3;*/
     color:white;
-    padding:3px 3px; 
-    align-content: center;
-    
+    padding:3px 15px; 
+    align-content: center; 
 }
 .order{
-    order:1;
+    order:0;
 }/* make Scheduling last so easier to touch on small screen*/
 .lessons-img{
-    width:110px;
-    height:110px;
-    padding-top: 20px;
+    width:6rem;
+    height:auto;
+    align-content: center;
+    padding-top: 25px;
 }
 
 body{
-    font:normal 20px 'Roboto', arial, sans-serif;
+    font-family: 'Roboto', arial, sans-serif;
     color: #1d1d1d;/*palegoldenrod;/*#ffd700;#FFDC22 yellow from picker -logo*/
     /*background-color: #1d1d1d; /* is Purdue background*/
     opacity: 0.9;
     text-align: left;
     background-color: white;
+    font-size: 20px;
 }
 a{
     text-decoration: none;
@@ -72,14 +75,6 @@ a:hover {
     width: 320px;
 }
 
-/*
-hr{
-    width: 150px;
-    height: 2px;
-    background-color: red;
-    border:0;
-    margin: 40px auto;
-}*/
 section{
     /*background-color: #333;*/
     padding: 125px 20px;
@@ -92,16 +87,12 @@ section p {
     line-height: 1.75;
 }
 section h3{
-    
     color: #1d1d1d;/*lightblue;*/
-    font: 24px 'Roboto', arial, sans-serif;
-   
-    
+    font: 1.75rem 'Roboto', arial, sans-serif;   
 }
 .appointment-ul{
     list-style: disc;
     font-size: 21px;
-
 }
 section h2{
     color:#1d1d1d; /*lightskyblue;*/
@@ -125,32 +116,33 @@ div a {
 }
 .nav-toggle-bar{
     color: #1d1d1d;
-    font-size: 44px;
+    font-size: 48px;
 }
 
 h4{
     padding-bottom: 8px;
+    font-size: 1.5rem;
 }
 .best {
     font-style: italic;
-
+    display:flex;
+    justify-content: space-around;
+    
 }
 .lessons{
     color:#1d1d1d;/*#50A0FB; blue inside best of lesson*/
-    padding-left: 10px;
-    width:200px;
-    height:auto;
+    padding-left: 2px;
+    width:1.25rem;
+    height:1.25rem;
     font-size: 30px;   
 }
 
 .btn{
-    
     display: inline-block;
     padding: 9px .5em 5px;
     background-color: goldenrod;
     border: 0 10.1em solid rgba(22, 20, 20, .9);
     color:#1d1d1d;
-    
     font-size: 34px;
     border-radius: 1.5em;
     text-decoration: none;
@@ -158,7 +150,6 @@ h4{
     font-weight: 300;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     align-items: center;
-    
 }
 .btn:hover{
     border-color: rgb(255,255,255,1);
@@ -170,7 +161,7 @@ form {
     border-style: solid;
     border-width: 3px;
     position:relative;
-    padding: .5rem 2rem;
+    padding: 1rem 2rem;
 }
        
     
@@ -182,7 +173,6 @@ form {
         border: 1px solid #bba;
         margin-top: .2rem;
         width:90%;
-       
     }
     textarea{
         min-height: 2rem;
@@ -192,20 +182,16 @@ form {
     }
     section div {
         color: #777;
-        font-size: .9 rem;
         padding: .1rem 0 .1rem .2rem;
         margin-top:2rem;
-        
     }
     section h3{
         font:larger;
         text-decoration: underline;         
     }
-    .sbs{
-        display:flex;
-        flex-shrink: inherit;
-        max-width: 600px;
-    } 
+   
+   
+    
     /*Additional details to fill out each input correctly (hidden by default)*/
    
     section span {        
@@ -233,7 +219,6 @@ form {
         background-color: rgba(255, 0, 0, 0.35);
         padding: .5rem .3rem;
     }
-    
     .submitBtn{
         border: none;
         color:white;
@@ -247,7 +232,6 @@ form {
         -moz-appearance: none;
     }   
     
-    /*///end label*/
     input  {
         border: none;
         background-color: #e4d8d8;
@@ -258,24 +242,35 @@ form {
         border-radius: 1rem;
         width: 85%;
     }
+    label {
+        
+        color:red;
+    }
+    
+    
+   
+    
+    /*///end label*/
     
     .facilityPic{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: space-evenly;
+        
     }
     .facilityPic img{
         margin-top: 8px;
-        
         width:90%;
         height:auto;
+        border-radius: .5rem;
     }
     .store-links i{
         font-size: 55px;
     }
-    /* grid container*/
+ /* grid container*/
 
-    .instructors{
+.instructors{
         grid-area: instructors;
     }
     .form-left{
@@ -304,7 +299,7 @@ form {
             "test";
     }
         
-     
+    
 /*tablet screen*/
 
 @media screen and (min-width: 501px){
@@ -315,23 +310,18 @@ form {
     .top {
         display: flex;
         flex-direction: row;
+        height: 65px;
     }
+    .order{order:-1}/* make scheduling first in nav under logo*/
     .nav-toggle-bar{
     display: none;
     }
-    /*.facilityPic  {
-        display:flex;
-        flex-direction: row;
-        flex-basis: 250px;
-        flex-wrap: wrap-reverse;
-        width:120px;
-    }*/
+   
     .facilityPic {
         display:flex;
         flex-wrap: wrap;
         flex: 70%;        
-        flex-direction: row;
-        
+        flex-direction: row;   
     }
       
     .facilityPic img{
@@ -343,23 +333,26 @@ form {
         width: 22rem;
         height: 11rem;
     }
+    .lessons-img{
+        width:8rem;
+        height:auto;
+        padding-top: 20px;
+    }
     
 } 
 /* end media tablet*/
 /* large*/
 @media screen and (min-width: 801px){
-   
+   .about-class{
+       margin-top: 25px;
+   }
     section{
         padding: 25px 30px;
     }
     
-    .best {
-        font-style: italic;
-        justify-content: space-around;
-    }
+    
     
     .lessons li{
-        
         color:#1d1d1d;/*#50A0FB; blue inside best of lesson*/
         display: flex;
         flex-direction: row;
@@ -370,24 +363,20 @@ form {
         font-size: 45px;   
     }
     form {
-    margin: 5px;
-    max-width: 75rem;
-    border-style: solid;
-    border-width: 3px;
-    padding: .2rem .5rem;
-}
+        margin: 5px;
+        max-width: 75rem;
+        border-style: solid;
+        border-width: 3px;
+        padding: .2rem .5rem;
+    }
     .content{
         display:flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    iframe{
-        padding-left:30% ;
-        
-
+    iframe {
+        width: 100% ;
     }
-    
-      
     
     .wrapper{
         display: grid;
@@ -399,22 +388,22 @@ form {
         "test test"; 
     }
     
-    .bio p {display:contents}
+    .bio p {
+        display:contents;
+        font-size: 1.2rem; 
+    }
+    .row img {
+        display:flex;
+        flex-wrap:wrap;
+        max-width: 45%;
+        max-height: 90%;
+    }
 
+    div .horizontal  {
+        width: 22rem;
+        max-height: 14rem;
+    }
 }
-.row img {
-        
-    display:flex;
-    flex-wrap:wrap;
-    max-width: 45%;
-    max-height: 90%;
-    
-}
-div .horizontal  {
-    width: 22rem;
-    max-height: 14rem;
-}
-   
 /*end large*/
     
    
@@ -422,14 +411,11 @@ div .horizontal  {
 /*phone*/
 @media screen and  (max-width: 500px){
     
+    
     section{
         padding: 25px 25px;
     }
     
-    .expanded{display: flex;
-        flex-direction: column;
-
-    }
     .store-links {
         flex-wrap:wrap;
     }
@@ -440,56 +426,47 @@ div .horizontal  {
     .facilityPic {
         display: flex;
         flex-direction: column;
-        
     }
     
+    .nav{
+        flex-direction: column;
+        display:none;
+    }
+    .expanded{
+        display:flex;
+        flex-direction: column;
+               
+    }    
 
 }/*end of small media*/
 
-/*ul.grid{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-boxes of pic to wide 2 column for facility*/ 
+/*footer elements */
 footer{
-    display:flex;
-    flex-direction: column;
     background-color: #1d1d1d;
     padding: 60px 0;
-    text-align: center;
-    align-items: center;
+    display:flex;
+    flex-direction: column;
+     
+    
 }
 footer ul{
-    display: flex;
-    flex-direction: row;  
     margin-bottom: 25px;
-    font-size: 42px;   
+    display:flex; 
+    justify-content: space-evenly;
 }
+footer a{
+    font-size: 44px;
+}
+
 
 footer p {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
     color: rgba(255,255,255,.6);
     margin-bottom: 10px;
+    margin-right:auto;
+    margin-left:auto;
+    
+    
 }
 
-/*footer a{                      why is footer messing up as screen expands?
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-}
-
-/*.contact .content{
-    padding-left: 0;
-    text-align: left;
-    color:white;
-    width: 350px;
-    height:auto;
-    background-color: tomato;
-}*/
-
-/*--------------
-HEADER
---------------*/
