@@ -265,6 +265,12 @@ form {
     .store-links i{
         font-size: 55px;
     }
+    .contactus {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
  /* grid container*/
 
 .instructors{
@@ -335,7 +341,11 @@ form {
         height:auto;
         padding-top: 20px;
     }
-    
+    .contactus {
+        display:flex;
+        flex-direction: row;
+
+    }
 } 
 /* end media tablet*/
 /* large*/
@@ -366,11 +376,7 @@ form {
         border-width: 3px;
         padding: .2rem .5rem;
     }
-    .content{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+    
     iframe {
         width: 100% ;
     }
@@ -433,7 +439,8 @@ form {
         display:flex;
         flex-direction: column;
                
-    }    
+    } 
+
 
 }/*end of small media*/
 
@@ -449,12 +456,13 @@ footer{
 footer ul{
     margin-bottom: 25px;
     display:flex; 
-    justify-content: space-between;
-    margin-left:200px;
-    margin-right:200px;
+    justify-content: space-around;
+   
+    
 }
 footer a{
     font-size: 44px;
+    text-align:center;
 }
 
 
